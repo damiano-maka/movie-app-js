@@ -1,0 +1,85 @@
+$coloreNero: #000;
+$coloreNeroShadow: #000000cc;
+$coloreBianco: #fff;
+$coloreBiancoShadow: #ffffffdc;
+$coloreOro: #daa520;
+$coloreBlue: #373b69;
+$coloreBlueScuro: #22254b;
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  margin-bottom: 1em;
+  display: block;
+
+  .mySlides {
+    display: none;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    animation: fadeIn 1.2s ease-in;
+  }
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: $coloreBianco;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover,
+  .next:hover {
+    background-color: $coloreNeroShadow;
+  }
+
+  .text {
+    color: $coloreBianco;
+    font-size: large;
+    padding-top: 2em;
+    padding-left: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, #1d1d1d 0%, transparent 100%);
+
+    b {
+      display: block;
+    }
+    h1,
+    h3 {
+      color: $coloreOro;
+      filter: drop-shadow(0 0 5px $coloreNero);
+    }
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.2;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

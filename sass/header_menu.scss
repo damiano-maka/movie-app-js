@@ -1,0 +1,65 @@
+$coloreNero: #000;
+$coloreBianco: #fff;
+$coloreOro: #daa520;
+$coloreOroShadow: #daa520ba;
+header {
+  background-color: $coloreNero;
+  padding: 0 10px 0 10px;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    ul.menu,
+    ul.logo {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      li {
+        color: $coloreBianco;
+        padding: 10px 15px;
+        height: 100%;
+        text-transform: uppercase;
+        a {
+          text-decoration: none;
+          color: $coloreBianco;
+        }
+        input[type="search"] {
+          border: 3px solid $coloreNero;
+          text-align: center;
+          color: $coloreBianco;
+          width: 100%;
+          max-width: 200px;
+          height: 40px;
+          font-size: 1em;
+          padding: 0;
+          margin: 0;
+          background-color: $coloreNero;
+        }
+        input[type="search"]:focus {
+          background-color: $coloreOroShadow;
+        }
+      }
+    }
+    ul.menu li:hover,
+    ul.logo li:hover {
+      background-color: $coloreOro;
+      transition: background-color 0.3s ease;
+    }
+    ul.logo {
+      li.logotv img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,316 @@
+$coloreNero: #000;
+$coloreBianco: #fff;
+$coloreBiancoShadow: rgba(255, 255, 255, 0.563);
+$coloreGrigioCh: rgb(229, 229, 229);
+$coloreErrore: #ff0000;
+$coloreButtone: #e52e21;
+$coloreBverde: #179f72;
+$coloreBhover: #00c181;
+//////////////////
+#accediSection,
+#contattiSection {
+  display: flex;
+  justify-content: center;
+}
+
+//stile per login form
+#login {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $coloreBianco;
+  background-color: $coloreBiancoShadow;
+  padding-top: 60px;
+  form {
+    margin: 3em auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $coloreBianco;
+    border: 3px solid $coloreNero;
+    div.minidiv {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 1em;
+      img {
+        width: 100%;
+        max-width: 200px;
+        padding: 0.5em;
+      }
+    }
+    #erroreLogin {
+      display: none;
+      text-align: center;
+      margin: 0 0 1em 0;
+      padding: 0;
+      color: $coloreErrore;
+    }
+    .chiudi1 {
+      margin: 0 10px 0 auto;
+      color: $coloreNero;
+      text-align: center;
+      padding: 0;
+      font-size: 2em;
+      cursor: pointer;
+    }
+    .chiudi1:hover {
+      color: $coloreErrore;
+    }
+    .contenitoreForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5em;
+      width: 100%;
+      padding: 1em;
+      background-color: $coloreGrigioCh;
+      label,
+      input {
+        margin: auto;
+        width: 100%;
+        line-height: 30px;
+        max-width: 500px;
+      }
+    }
+
+    #buttoni {
+      align-self: center;
+      display: flex;
+      justify-content: space-evenly;
+      button {
+        font-size: larger;
+        font-weight: bold;
+        margin: 0.5em;
+        width: 200px;
+        line-height: 30px;
+        border: 1px solid $coloreNero;
+        cursor: pointer;
+        background-color: $coloreBverde;
+      }
+      button:hover {
+        opacity: 90%;
+      }
+    }
+
+    #invito_reg {
+      margin-top: 0.5em;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      h1 {
+        color: $coloreBverde;
+      }
+      h1:hover {
+        color: $coloreBhover;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//stile per signUp form
+#signUp {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $coloreBianco;
+  background-color: $coloreBiancoShadow;
+  padding-top: 60px;
+  form {
+    margin: 3em auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $coloreBianco;
+    border: 3px solid $coloreNero;
+    div.minidiv2 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 1em;
+      img {
+        width: 100%;
+        max-width: 200px;
+        padding: 0.5em;
+      }
+    }
+    #erroreSignUp {
+      display: none;
+      text-align: center;
+      margin: 0 0 1em 0;
+      padding: 0;
+      color: $coloreErrore;
+    }
+    .chiudi2 {
+      margin: 0 10px 0 auto;
+      color: $coloreNero;
+      text-align: center;
+      padding: 0;
+      font-size: 2em;
+      cursor: pointer;
+    }
+    .chiudi2:hover {
+      color: $coloreErrore;
+    }
+    .contenitoreForm2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5em;
+      width: 100%;
+      padding: 1em;
+      background-color: $coloreGrigioCh;
+      label,
+      input {
+        margin: auto;
+        width: 100%;
+        line-height: 30px;
+        max-width: 500px;
+      }
+    }
+
+    #buttoni2 {
+      align-self: center;
+      display: flex;
+      justify-content: space-evenly;
+      button {
+        font-size: larger;
+        font-weight: bold;
+        margin: 0.5em;
+        width: 200px;
+        line-height: 30px;
+        border: 1px solid $coloreNero;
+        cursor: pointer;
+        background-color: $coloreBverde;
+      }
+
+      button:first-child {
+        background-color: $coloreButtone;
+      }
+      button:hover {
+        opacity: 90%;
+      }
+    }
+  }
+}
+// contatti section stile
+//stile per login form
+#contatto {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $coloreBianco;
+  background-color: $coloreBiancoShadow;
+  padding-top: 60px;
+  form {
+    margin: 3em auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $coloreBianco;
+    border: 3px solid $coloreNero;
+    div.minidiv {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 1em;
+      img {
+        width: 100%;
+        max-width: 200px;
+        padding: 0.5em;
+      }
+    }
+    .chiudi0 {
+      margin: 0 10px 0 auto;
+      color: $coloreNero;
+      text-align: center;
+      padding: 0;
+      font-size: 2em;
+      cursor: pointer;
+    }
+    #erroreContatti {
+      display: none;
+      text-align: center;
+      margin: 0 0 1em 0;
+      padding: 0;
+      color: $coloreErrore;
+    }
+    .chiudi0:hover {
+      color: $coloreErrore;
+    }
+    .contenitoreForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5em;
+      width: 100%;
+      padding: 1em;
+      background-color: $coloreGrigioCh;
+      label,
+      input,
+      textarea {
+        margin: auto;
+        width: 100%;
+        line-height: 30px;
+        max-width: 500px;
+      }
+    }
+
+    #buttoni {
+      align-self: center;
+      display: flex;
+      justify-content: space-evenly;
+      button {
+        font-size: larger;
+        font-weight: bold;
+        margin: 0.5em;
+        width: 200px;
+        line-height: 30px;
+        border: 1px solid black;
+        cursor: pointer;
+        background-color: $coloreBverde;
+      }
+      button:hover {
+        opacity: 90%;
+      }
+    }
+
+    #invito_reg {
+      margin-top: 0.5em;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      h1 {
+        color: $coloreBverde;
+      }
+      h1:hover {
+        color: $coloreBhover;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

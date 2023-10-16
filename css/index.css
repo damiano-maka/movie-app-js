@@ -1,0 +1,719 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #000;
+}
+
+main {
+  margin: 0 auto;
+}
+
+footer {
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background: rgb(0, 0, 0);
+  background: #000;
+  border-top: 3px #fff solid;
+}
+
+header {
+  background-color: #000;
+  padding: 0 10px 0 10px;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header nav ul.menu,
+header nav ul.logo {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+header nav ul.menu li,
+header nav ul.logo li {
+  color: #fff;
+  padding: 10px 15px;
+  height: 100%;
+  text-transform: uppercase;
+}
+header nav ul.menu li a,
+header nav ul.logo li a {
+  text-decoration: none;
+  color: #fff;
+}
+header nav ul.menu li input[type=search],
+header nav ul.logo li input[type=search] {
+  border: 3px solid #000;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+}
+header nav ul.menu li input[type=search]:focus,
+header nav ul.logo li input[type=search]:focus {
+  background-color: rgba(218, 165, 32, 0.7294117647);
+}
+header nav ul.menu li:hover,
+header nav ul.logo li:hover {
+  background-color: #daa520;
+  transition: background-color 0.3s ease;
+}
+header nav ul.logo li.logotv img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  margin-bottom: 1em;
+  display: block;
+}
+.slideshow-container .mySlides {
+  display: none;
+}
+.slideshow-container img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  animation: fadeIn 1.2s ease-in;
+}
+.slideshow-container .prev,
+.slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 1s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.slideshow-container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.slideshow-container .prev:hover,
+.slideshow-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.slideshow-container .text {
+  color: #fff;
+  font-size: large;
+  padding-top: 2em;
+  padding-left: 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, #1d1d1d 0%, transparent 100%);
+}
+.slideshow-container .text b {
+  display: block;
+}
+.slideshow-container .text h1,
+.slideshow-container .text h3 {
+  color: #daa520;
+  filter: drop-shadow(0 0 5px #000);
+}
+.slideshow-container .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+section#homeSection {
+  max-width: 1600px;
+  margin: auto;
+}
+
+div#cat_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  background: #000;
+}
+div#cat_div div.catalogoM {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  width: 100%;
+  max-width: 1600px;
+  background: #000;
+}
+div#cat_div div.catalogoM div.categoria {
+  padding: 10px 15px;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.2em;
+}
+div#cat_div div.catalogoM div.categoria:hover {
+  background-color: #daa520;
+  cursor: pointer;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #000;
+}
+#main div#main {
+  max-width: 1600px;
+  padding: 1em;
+}
+#main .movie {
+  display: block;
+  width: 300px;
+  margin: 1rem;
+  background-color: #373b69;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+#main .movie img {
+  width: 100%;
+}
+#main .movie-info {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+#main .movie-info h3 {
+  margin-top: 0;
+}
+#main .movie-info span {
+  background-color: #22254b;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+#main .overview {
+  background-color: rgba(255, 255, 255, 0.862745098);
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: hidden;
+  transition: transform 0.3s ease-in;
+}
+#main .overview h2 {
+  color: #000;
+  text-decoration: underline;
+}
+#main .movie:hover .overview {
+  transform: translateY(0);
+}
+#main .movie:hover img {
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in;
+}
+
+/* classe da aggiungere dopo create l elemnto */
+div#movieplayer {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  padding: 3em;
+  color: #fff;
+  display: none;
+  margin: 0 auto;
+}
+div#movieplayer div#movieplayvideo {
+  background-color: #000;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  border: 3em solid #000;
+  border-radius: 5% 10%;
+}
+div#movieplayer div#movieplayvideo a {
+  text-decoration: underline;
+  color: #fff;
+}
+div#movieplayer div#movieplayvideo h1,
+div#movieplayer div#movieplayvideo h4 {
+  color: #daa520;
+  width: 100%;
+}
+div#movieplayer div#movieplayvideo div#player {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+div#movieplayer div#movieplayvideo div#player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#accediSection,
+#contattiSection {
+  display: flex;
+  justify-content: center;
+}
+
+#login {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.563);
+  padding-top: 60px;
+}
+#login form {
+  margin: 3em auto;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border: 3px solid #000;
+}
+#login form div.minidiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1em;
+}
+#login form div.minidiv img {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.5em;
+}
+#login form #erroreLogin {
+  display: none;
+  text-align: center;
+  margin: 0 0 1em 0;
+  padding: 0;
+  color: #ff0000;
+}
+#login form .chiudi1 {
+  margin: 0 10px 0 auto;
+  color: #000;
+  text-align: center;
+  padding: 0;
+  font-size: 2em;
+  cursor: pointer;
+}
+#login form .chiudi1:hover {
+  color: #ff0000;
+}
+#login form .contenitoreForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+  width: 100%;
+  padding: 1em;
+  background-color: rgb(229, 229, 229);
+}
+#login form .contenitoreForm label,
+#login form .contenitoreForm input {
+  margin: auto;
+  width: 100%;
+  line-height: 30px;
+  max-width: 500px;
+}
+#login form #buttoni {
+  align-self: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+#login form #buttoni button {
+  font-size: larger;
+  font-weight: bold;
+  margin: 0.5em;
+  width: 200px;
+  line-height: 30px;
+  border: 1px solid #000;
+  cursor: pointer;
+  background-color: #179f72;
+}
+#login form #buttoni button:hover {
+  opacity: 90%;
+}
+#login form #invito_reg {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#login form #invito_reg h1 {
+  color: #179f72;
+}
+#login form #invito_reg h1:hover {
+  color: #00c181;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#signUp {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.563);
+  padding-top: 60px;
+}
+#signUp form {
+  margin: 3em auto;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border: 3px solid #000;
+}
+#signUp form div.minidiv2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1em;
+}
+#signUp form div.minidiv2 img {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.5em;
+}
+#signUp form #erroreSignUp {
+  display: none;
+  text-align: center;
+  margin: 0 0 1em 0;
+  padding: 0;
+  color: #ff0000;
+}
+#signUp form .chiudi2 {
+  margin: 0 10px 0 auto;
+  color: #000;
+  text-align: center;
+  padding: 0;
+  font-size: 2em;
+  cursor: pointer;
+}
+#signUp form .chiudi2:hover {
+  color: #ff0000;
+}
+#signUp form .contenitoreForm2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+  width: 100%;
+  padding: 1em;
+  background-color: rgb(229, 229, 229);
+}
+#signUp form .contenitoreForm2 label,
+#signUp form .contenitoreForm2 input {
+  margin: auto;
+  width: 100%;
+  line-height: 30px;
+  max-width: 500px;
+}
+#signUp form #buttoni2 {
+  align-self: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+#signUp form #buttoni2 button {
+  font-size: larger;
+  font-weight: bold;
+  margin: 0.5em;
+  width: 200px;
+  line-height: 30px;
+  border: 1px solid #000;
+  cursor: pointer;
+  background-color: #179f72;
+}
+#signUp form #buttoni2 button:first-child {
+  background-color: #e52e21;
+}
+#signUp form #buttoni2 button:hover {
+  opacity: 90%;
+}
+
+#contatto {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.563);
+  padding-top: 60px;
+}
+#contatto form {
+  margin: 3em auto;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  border: 3px solid #000;
+}
+#contatto form div.minidiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1em;
+}
+#contatto form div.minidiv img {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.5em;
+}
+#contatto form .chiudi0 {
+  margin: 0 10px 0 auto;
+  color: #000;
+  text-align: center;
+  padding: 0;
+  font-size: 2em;
+  cursor: pointer;
+}
+#contatto form #erroreContatti {
+  display: none;
+  text-align: center;
+  margin: 0 0 1em 0;
+  padding: 0;
+  color: #ff0000;
+}
+#contatto form .chiudi0:hover {
+  color: #ff0000;
+}
+#contatto form .contenitoreForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+  width: 100%;
+  padding: 1em;
+  background-color: rgb(229, 229, 229);
+}
+#contatto form .contenitoreForm label,
+#contatto form .contenitoreForm input,
+#contatto form .contenitoreForm textarea {
+  margin: auto;
+  width: 100%;
+  line-height: 30px;
+  max-width: 500px;
+}
+#contatto form #buttoni {
+  align-self: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+#contatto form #buttoni button {
+  font-size: larger;
+  font-weight: bold;
+  margin: 0.5em;
+  width: 200px;
+  line-height: 30px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: #179f72;
+}
+#contatto form #buttoni button:hover {
+  opacity: 90%;
+}
+#contatto form #invito_reg {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#contatto form #invito_reg h1 {
+  color: #179f72;
+}
+#contatto form #invito_reg h1:hover {
+  color: #00c181;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+footer #socialmedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer #socialmedia a {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0.6em;
+}
+footer #socialmedia a img {
+  width: 100%;
+  height: 100%;
+}
+footer #socialmedia a img:hover {
+  filter: drop-shadow(0 0 10px white);
+}
+
+@media screen and (min-width: 1600px) {
+  header div.slideshow-container {
+    width: 100%;
+    max-width: 1600px;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    display: block;
+  }
+  header div.slideshow-container div.mySlides {
+    display: none;
+  }
+  header div.slideshow-container img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    animation: fadeIn 1.2s ease-in;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div#cat_div div.catalogoM {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  div#cat_div div.catalogoM div.categoria {
+    padding: 10px 15px;
+    width: 50%;
+    height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+    background-color: #000;
+  }
+}
+@media screen and (max-width: 900px) {
+  .slideshow-container .text b {
+    display: none;
+  }
+}
+@media screen and (max-width: 733px) {
+  main div.movie {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+@media screen and (max-width: 598px) {
+  .slideshow-container .text {
+    font-size: smaller;
+  }
+  .slideshow-container .text a {
+    text-decoration: none;
+    font-size: smaller;
+  }
+  header nav {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 450px) {
+  header {
+    padding: 0;
+  }
+  header nav ul {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  header ul.menu li,
+  header ul.logo li {
+    width: 100%;
+    text-align: center;
+  }
+  header ul.logo li.logotv:hover {
+    background-color: #000;
+  }
+}
